@@ -7,14 +7,7 @@ export const environment = {
   apiURL: "https://jsonplaceholder.typicode.com/",
   nbaURL: "https://api-nba-v1.p.rapidapi.com/teams/league/standard",
   firebase: {
-    apiKey: "AIzaSyCGOCST6lKLquQBR9sKqv9B2_0VTYzY1ig",
-    authDomain: "cotosoftapp.firebaseapp.com",
-    databaseURL: "https://cotosoftapp.firebaseio.com",
-    projectId: "cotosoftapp",
-    storageBucket: "cotosoftapp.appspot.com",
-    messagingSenderId: "987358431260",
-    appId: "1:987358431260:web:520b8627e1581b890077d9",
-    measurementId: "G-P3TS4188BV"
+
   }
 };
 
