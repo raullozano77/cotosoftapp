@@ -25,8 +25,8 @@ import { Team } from './nba';
   ) {
     this.titulo = 'Pagina de NBA';
     let _headers = new HttpHeaders();
-    _headers = _headers.append('X-RapidAPI-Key', '785ed29affmshd11f44f5d3d8c4dp1e6c06jsn97f1f52aeefa');
-    _headers = _headers.append('x-rapidapi-host', 'api-nba-v1.p.rapidapi.com');
+    _headers = _headers.append('X-RapidAPI-Key', '');
+    _headers = _headers.append('x-rapidapi-host', '');
     _headers = _headers.append('useQueryString', 'true');
 
 console.log(_headers);
