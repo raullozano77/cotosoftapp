@@ -1,0 +1,63 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Inicio</div>
+    <div id="path">Inicio</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="foto_condomino">
+                <!-- <img src="assets/images/c1.jpg" alt="Condomino"> -->
+                <img src="{{_authS.usuario.photoURL}}" class="card-img-top" alt="usuario" />
+            </div>
+            <div class="informacionpersonal">
+                <h1 class="titulo">Información Personal</h1>
+                <p>{{_authS.usuario.nombre}}</p>
+                <p>{{_authS.usuario.email}}</p>
+                <p>Casa 42</p>
+                <p>Residente</p>
+                <br />
+                <h1 class="titulo">Saldos</h1>
+                <div class="informacionpersonal-renglon">
+                    <a href="#">Mantenimiento:</a><span>$450.00</span><br>
+                </div>
+                <div class="informacionpersonal-renglon">
+                    <a href="#">Extraordinarias:</a><span>$0.00</span><br>
+                </div>
+                <div class="informacionpersonal-renglon">
+                    <a href="#">Areas comunes:</a><span>$0.00</span><br>
+                </div>
+                <div class="informacionpersonal-renglon">
+                    <a href="#" class="bold">Total deudas:</a><span class="red">$450.00</span>
+                </div>
+            </div>
+            <div class="secc_avisos">
+                <div class="titulo_seccion">Morosos</div>
+                <table id="table_contenido" class="table table-striped table-bordered table-hover" style="position: relative;" role="grid">
+                    <thead>
+                        <tr>
+                            <th>Condomino</th>
+                            <th>Casa</th>
+                            <th>No. Pagos</th>
+                            <th>Total Deuda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let moroso of morosos">
+                            <td>{{moroso.condomino}}</td>
+                            <td>{{moroso.casa}}</td>
+                            <td>{{moroso.no_pagos}}</td>
+                            <td>{{moroso.deuda | currency}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Condomino</th>
+                            <th>Casa</th>
+                            <th>No. Pagos</th>
+                            <th>Total Deuda</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>

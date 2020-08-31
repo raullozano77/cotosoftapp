@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-sm">
+        <thead class="thead-dark">
+            <th>*</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Status</th>
+            <th>Categoria</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button (click)="emitirEvento($event)">Pasar Datos</button></td>
+                <td>{{nombre}}</td>
+                <td>{{precio}}</td>
+                <td>{{marca}}</td>
+                <td>{{status}}</td>
+                <td>{{categoria}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

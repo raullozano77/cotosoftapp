@@ -1,0 +1,335 @@
+.contenedor .footer .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .footer .underlineHover:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.contenedor .footer .underlineHover:hover:after {
+    width: 100%;
+}
+
+
+/* Inicia estilo menu */
+
+.contenedor .header nav {
+    background: #222;
+    padding: 0px 0px;
+    position: static;
+    z-index: 5;
+}
+
+.contenedor .header nav ul {
+    list-style-type: none;
+}
+
+.contenedor .header nav a {
+    color: white;
+    font-weight: 400;
+}
+
+.contenedor .contenido .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .header nav .underlineHover:hover {
+    color: #56baed;
+    text-decoration: none;
+}
+
+.contenedor .header nav .underlineHover:hover:after {
+    width: 100%;
+}
+
+.contenedor .header nav .menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.contenedor .header nav .logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.contenedor .header nav .button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+.contenedor .contenido a {
+    color: #444444;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contenedor .contenido h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 40px 8px 10px 8px;
+    color: #cccccc;
+}
+
+
+/* TABS */
+
+.contenedor .contenido h2.inactive {
+    color: #cccccc;
+}
+
+.contenedor .contenido h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+}
+
+
+/* FORM TYPOGRAPHY*/
+
+.contenedor .contenido input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.contenedor .contenido input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #39ace7;
+}
+
+.contenedor .contenido input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.contenedor .contenido input[type=text],
+.contenedor .contenido input[type=password] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.contenedor .contenido input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.contenedor .contenido input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.contenedor .contenido input[type=text]:placeholder {
+    color: #cccccc;
+}
+
+.contenedor .contenido input[type=password]:placeholder {
+    color: #cccccc;
+}
+
+
+/* ANIMATIONS */
+
+
+/* Simple CSS3 Fade-in-down Animation */
+
+.contenedor .fadeInDown,
+.contenedor .contenido .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+/* Simple CSS3 Fade-in Animation */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contenedor .fadeInDown,
+.contenedor .contenido .fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.contenedor .contenido .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.contenedor .contenido .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.contenedor .contenido .fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.contenedor .contenido .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+/* Simple CSS3 Fade-in Animation */
+
+.contenedor .contenido .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .contenido .underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.contenedor .contenido .underlineHover:hover:after {
+    width: 100%;
+}
+
+
+/* OTHERS */
+
+.contenedor .contenido *:focus {
+    outline: none;
+}
+
+.icon_login {
+    width: 75px;
+    height: 70px;
+    padding: 15px;
+}

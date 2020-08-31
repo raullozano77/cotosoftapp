@@ -1,0 +1,29 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Aviso</div>
+    <div id="path">Inicio>Cosas Perdidas>Reporte</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="contenido_seccion">
+                <div class="titulo_secciones">
+                    <img class="img_secciones" src="assets/images/cosasperdidas.png" alt="areascomunes">
+                    <h1>Reporte Cosa Perdida</h1>
+                </div>
+                <div>
+                    <form id="form_datos" action="" method="get" onsubmit="vercosasperdidas()" target="_blank">
+                        <div class="form-group">
+                            <label class="label_formularios" for="asuntoaviso">*Descripción del aviso</label>
+                            <textarea id="asuntoaviso" name="asuntoaviso" rows="4" cols="50" class="input_formulario" placeholder="Ingresa el Reporte de la Cosa Perdida" required></textarea>
+                        </div>
+                        <p class="campos_requeridos">* Campos requeridos</p>
+                        <div class="botones_secciones">
+                            <div class="boton"><a [routerLink]="['/cosasperdidas']">Aceptar</a></div>
+                            <div class="boton"><a [routerLink]="['/cosasperdidas']">Cancelar</a></div>
+                            <!--                             <input id="enviar" class="submit_boton" type="submit" value="Aceptar">
+                            <input id="enviar" class="submit_boton" type="submit" value="Cancelar"> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

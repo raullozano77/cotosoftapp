@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>{{titulo}}</h1>
+    <!--     <table class="table table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="productos[0].estatus==true">
+                <td>{{productos[0].nombre}}</td>
+                <td>{{productos[0].marca}}</td>
+                <td>{{productos[0].precio}}</td>
+                <td>{{productos[0].estatus}}</td>
+            </tr>
+            <tr *ngIf="productos[1].estatus==true">
+                <td>{{productos[1].nombre}}</td>
+                <td>{{productos[1].marca}}</td>
+                <td>{{productos[1].precio}}</td>
+                <td>{{productos[1].estatus}}</td>
+            </tr>
+            <tr *ngIf="productos[2].estatus==true">
+                <td>{{productos[2].nombre}}</td>
+                <td>{{productos[2].marca}}</td>
+                <td>{{productos[2].precio}}</td>
+                <td>{{productos[2].estatus}}</td>
+            </tr>
+            <tr *ngIf="productos[3].estatus==true">
+                <td>{{productos[3].nombre}}</td>
+                <td>{{productos[3].marca}}</td>
+                <td>{{productos[3].precio}}</td>
+                <td>{{productos[3].estatus}}</td>
+            </tr>
+            <tr *ngIf="productos[4].estatus==true">
+                <td>{{productos[4].nombre}}</td>
+                <td>{{productos[4].marca}}</td>
+                <td>{{productos[4].precio}}</td>
+                <td>{{productos[4].estatus}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <table class="table table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let producto of productos">
+                <!-- <tr *ngIf="producto.estatus==true"> -->
+                <!-- <tr [style.color]="producto.estatus == false ? 'red' : 'grey' "> -->
+                <!-- <tr [class.agotado]="producto.estatus == false"> -->
+                <tr [class.agotado]="producto.marca == 'Osterizer'">
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.marca}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.estatus}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

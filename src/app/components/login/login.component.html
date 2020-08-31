@@ -1,0 +1,81 @@
+<div *ngIf="!_authS.usuario.uid" class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Iniciar Sesión</h5>
+                    <form class="form-signin">
+                        <hr class="my-4">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" (click)="ingresar()" *ngIf="!_authS.usuario.uid"><i class="fab fa-google mr-2"></i> Iniciar Sesíon con Google</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="_authS.usuario.uid" class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sesión Iniciada</h5>
+                    <form class="form-signin">
+                        <div class="card" style="width: 18rem;
+                        margin: 0 auto;
+                        float: none;
+                        margin-bottom: 10px;
+                        ">
+                            <img class="card-img-top" src="{{_authS.usuario.photoURL}}" alt="usuario">
+                            <div class="card-body">
+                                <h5 class="card-title">Información del Usuario</h5>
+                                <p class="card-text">{{_authS.usuario.nombre}}</p>
+                                <p class="card-text">{{_authS.usuario.email}}</p>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" (click)="salir()" *ngIf="_authS.usuario.uid"><i class="fab fa-google mr-2"></i> Cerrar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <main class="contenido ">
+    <div *ngIf="!_authS.usuario.uid" id="seccion_titulo">Iniciar Sesión</div>
+    <div *ngIf="_authS.usuario.uid" id="seccion_titulo">Cerrar Sesión</div>
+
+    <div *ngIf="!_authS.usuario.uid" id="path">Inicio > Iniciar Sesión</div>
+    <div *ngIf="_authS.usuario.uid" id="path">Inicio > Cerrar Sesión</div>
+
+
+    <div class="box_login">
+        <button class="btn btn-danger mb-2" (click)="ingresar()" *ngIf="!_authS.usuario.uid">
+          Iniciar Sesión con Google
+        </button>
+        <hr />
+        <div class="row justify-content-center" *ngIf="_authS.usuario.uid">
+            <div class="col-1">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{_authS.usuario.photoURL}}" alt="usuario">
+                    <div class="card-body">
+                        <h5 class="card-title">Información del Usuario</h5>
+                        <p class="card-text">{{_authS.usuario.nombre}}</p>
+                        <p class="card-text">{{_authS.usuario.email}}</p>
+                        <button class="btn btn-primary mb-2" (click)="salir()" *ngIf="_authS.usuario.uid">
+                          Cerrar Sesión
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main> -->

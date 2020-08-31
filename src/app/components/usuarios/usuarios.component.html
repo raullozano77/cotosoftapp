@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>{{titulo}}</h1>
+    <ng-container *ngIf="user">
+        <h1>Name: {{ user.name }}</h1>
+        <br />
+        <span>Name: {{ user.name }}</span><br />
+        <span>UserName: {{ user.username }}</span><br />
+        <span>Email: {{ user.email | lowercase }}</span><br />
+    </ng-container>
+</div>

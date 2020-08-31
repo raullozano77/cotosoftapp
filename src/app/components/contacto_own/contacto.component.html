@@ -1,0 +1,35 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Contacto</div>
+    <div id="path">Inicio>Contacto</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="contenido_seccion">
+                <div class="titulo_secciones">
+                    <img class="img_secciones" src="assets/images/contacto.png" alt="areascomunes">
+                    <h1>Contacto</h1>
+                </div>
+                <div>
+                    <form id="form_contacto" action="/inicio" method="get" target="_blank">
+                        <div class="form-group">
+                            <label class="label_formularios" for="nombrecompleto">*Nombre Completo</label>
+                            <input id="nombrecompleto" class="input_formulario" type="text" placeholder="Ingresa tu Nombre Completo" required>
+
+                            <label class="label_formularios" for="correopersonal">*Coreo de Contacto</label>
+                            <input id="correopersonal" class="input_formulario" type="email" placeholder="Ej.: usuario@servidor.com" required>
+
+                            <label class="label_formularios" for="tumensaje">*Tu Mensaje</label>
+                            <textarea id="tumensaje" name="tumensaje" rows="4" cols="50" class="input_formulario" placeholder="Ingresa Tu Mensaje" required></textarea>
+
+                        </div>
+                        <p class="campos_requeridos">* Campos requeridos</p>
+                        <div class="botones_secciones">
+                            <div class="boton"><a [routerLink]="['/inicio']">Enviar datos</a></div>
+                            <!-- <input id="enviar" class="submit_boton" type="submit" value="Enviar datos"> -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>

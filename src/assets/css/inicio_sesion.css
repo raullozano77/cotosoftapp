@@ -1,0 +1,619 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #DDDDDD;
+    color: #000;
+    font-family: 'Asap', sans-serif;
+    line-height: 1;
+    font-size: 12px;
+}
+
+.contenedor {
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header" "contenido contenido contenido" "widget-1 widget-2 sidebar" "footer footer footer";
+}
+
+.contenedor>div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #fff;
+    padding: 0px;
+}
+
+.contenedor .header {
+    background: #444444;
+    color: #fff;
+    grid-area: header;
+    height: 166px;
+    z-index: 8;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    padding: 15px;
+    min-height: 400px;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+    height: 50px;
+    background: #444444;
+    text-align: center;
+}
+
+
+/* Banner Styles */
+
+.contenedor .header .banner {
+    background-image: url("/images/banner.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    min-height: 120px;
+}
+
+.contenedor .header .banner .logo {
+    position: absolute;
+    z-index: 3;
+    top: 5%;
+    left: 10px;
+    width: 120px;
+    height: 65px;
+}
+
+.contenedor .header .banner .welcome {
+    opacity: 0.7;
+    text-align: center;
+    background-color: hsl(180, 25%, 25%, .75);
+    position: absolute;
+    z-index: 3;
+    top: 3%;
+    left: 0px;
+    width: 100%;
+    min-height: 80px;
+}
+
+.contenedor .header .banner .welcome h1 {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.contenedor .header .banner .welcome span {
+    font-size: 1.2em;
+}
+
+.contenedor .footer a {
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #DDDDDD;
+}
+
+.contenedor .footer .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .footer .underlineHover:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.contenedor .footer .underlineHover:hover:after {
+    width: 100%;
+}
+
+
+/* Inicia estilo menu */
+
+.contenedor .header nav {
+    background: #222;
+    padding: 0px 0px;
+    position: static;
+    z-index: 5;
+}
+
+.contenedor .header nav ul {
+    list-style-type: none;
+}
+
+.contenedor .header nav a {
+    color: white;
+    font-weight: 400;
+}
+
+.contenedor .contenido .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .header nav .underlineHover:hover {
+    color: #56baed;
+    text-decoration: none;
+}
+
+.contenedor .header nav .underlineHover:hover:after {
+    width: 100%;
+}
+
+.contenedor .header nav .menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.contenedor .header nav .logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.contenedor .header nav .button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+
+/* Mobile menu */
+
+.contenedor .header nav .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor .header nav .toggle {
+    order: 1;
+}
+
+.contenedor .header nav .item.button {
+    order: 2;
+}
+
+.contenedor .header nav .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.contenedor .header nav .item.active {
+    display: block;
+}
+
+
+/* Termina estilo menu */
+
+@media screen and (max-width: 1024px) {
+    .contenedor .header {
+        height: 156px;
+    }
+    .contenedor .header .banner {
+        min-height: 110px;
+    }
+    .contenedor .header .banner .logo {
+        top: 2%;
+        width: 110px;
+        height: 59px;
+    }
+    .contenedor .header .banner .welcome {
+        top: 1%;
+        min-height: 80px;
+    }
+}
+
+
+/* Tablet menu */
+
+@media all and (min-width: 600px) {
+    .contenedor .header nav .menu {
+        justify-content: center;
+    }
+    .contenedor .header nav .logo {
+        flex: 1;
+    }
+    .contenedor .header nav .toggle {
+        flex: 1;
+        text-align: right;
+    }
+    .contenedor .header nav .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .contenedor .header nav .toggle {
+        order: 2;
+    }
+    .contenedor .header nav .button.secondary {
+        border: 0;
+    }
+    .contenedor .header nav .button a {
+        padding: 7.5px 15px;
+        background: #2DA5E4;
+        border: 1px #1B8ECD solid;
+    }
+    .contenedor .header nav .button.secondary a {
+        background: transparent;
+    }
+    .contenedor .header nav .button a:hover {
+        text-decoration: none;
+    }
+    .contenedor .header nav .button:not(.secondary) a:hover {
+        background: #1B8ECD;
+        border-color: #2DA5E4;
+    }
+    .contenedor .header nav .button.secondary a:hover {
+        color: #ddd;
+    }
+}
+
+
+/* Desktop menu */
+
+@media all and (min-width: 900px) {
+    .contenedor .header nav .item {
+        display: block;
+        width: auto;
+    }
+    .contenedor .header nav .toggle {
+        display: none;
+    }
+    .contenedor .header nav .logo {
+        order: 0;
+    }
+    .contenedor .header nav .item {
+        order: 1;
+    }
+    .contenedor .header nav .button {
+        order: 2;
+    }
+    .contenedor .header nav .menu li {
+        padding: 15px 10px;
+    }
+    .contenedor .header nav .menu li.button {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contenedor .header {
+        height: 105px;
+    }
+    .contenedor .header .banner {
+        min-height: 55px;
+    }
+    .contenedor .header .banner .logo {
+        top: 2%;
+        width: 60px;
+        height: 32px;
+    }
+    .contenedor .header .banner .welcome {
+        top: 1%;
+        min-height: 7px;
+    }
+    .contenedor .header .banner .welcome h1 {
+        font-size: 12px;
+        padding: 2px;
+    }
+}
+
+.contenedor .contenido a {
+    color: #444444;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contenedor .contenido h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 40px 8px 10px 8px;
+    color: #cccccc;
+}
+
+
+/* STRUCTURE */
+
+.contenedor .contenido .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.contenedor .contenido #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.contenedor .contenido #formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* TABS */
+
+.contenedor .contenido h2.inactive {
+    color: #cccccc;
+}
+
+.contenedor .contenido h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+}
+
+
+/* FORM TYPOGRAPHY*/
+
+.contenedor .contenido input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.contenedor .contenido input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #39ace7;
+}
+
+.contenedor .contenido input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.contenedor .contenido input[type=text],
+.contenedor .contenido input[type=password] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.contenedor .contenido input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.contenedor .contenido input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+.contenedor .contenido input[type=text]:placeholder {
+    color: #cccccc;
+}
+
+.contenedor .contenido input[type=password]:placeholder {
+    color: #cccccc;
+}
+
+
+/* ANIMATIONS */
+
+
+/* Simple CSS3 Fade-in-down Animation */
+
+.contenedor .fadeInDown,
+.contenedor .contenido .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+/* Simple CSS3 Fade-in Animation */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contenedor .fadeInDown,
+.contenedor .contenido .fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.contenedor .contenido .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.contenedor .contenido .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.contenedor .contenido .fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.contenedor .contenido .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+/* Simple CSS3 Fade-in Animation */
+
+.contenedor .contenido .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.contenedor .contenido .underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.contenedor .contenido .underlineHover:hover:after {
+    width: 100%;
+}
+
+
+/* OTHERS */
+
+.contenedor .contenido *:focus {
+    outline: none;
+}
+
+.icon_login {
+    width: 75px;
+    height: 70px;
+    padding: 15px;
+}

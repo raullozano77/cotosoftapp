@@ -1,0 +1,44 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Finanzas</div>
+    <div id="path">Inicio>Finanzas>Pago</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="contenido_seccion">
+                <div class="titulo_secciones">
+                    <img class="img_secciones" src="assets/images/mispagos.png" alt="mispagos">
+                    <h1>Mis Pagos</h1>
+                </div>
+                <div>
+                    <form id="form_datos" action="/finanzas">
+                        <div class="form-group">
+                            <label class="label_formularios" for="tipopago">* Tipo de Pago</label>
+                            <select class="select_formulario same-as-selected" id="tipopago" required>
+                              <option selected>Elige el tipo de pago...</option>
+                              <option>Transferencia</option>
+                              <option>Efectivo</option>
+                              <option>Depósito</option>
+                              <option>Cheque</option>
+                            </select>
+                            <label class="label_formularios" for="referencia">Referencia</label>
+                            <input id="referencia" class="input_formulario" type="text" placeholder="Ingresa tu referencia" required>
+                            <label class="label_formularios" for="categoria">Categoría</label>
+                            <input class="input_formulario" type="text" placeholder="Categoría" id="categoria" value="Manteminimiento" readonly>
+                            <label class="label_formularios" for="cantidad">* Cantidad</label>
+                            <div class="div_span_money">
+                                <span class="span_moneda">$</span>
+                                <input class="input_formulario_moneda" type="number" id="cantidad" min="0" step="1" data-bind="value:replyNumber" placeholder="Ingresa el monto pagado" required/>
+                            </div>
+                        </div>
+                        <p class="campos_requeridos">* Campos requeridos</p>
+                        <div class="botones_secciones">
+                            <div class="boton"><a [routerLink]="['/finanzas']">Aceptar</a></div>
+                            <div class="boton"><a [routerLink]="['/finanzas']">Cancelar</a></div>
+                            <!--                             <input id="enviar" class="submit_boton" type="submit" value="Aceptar">
+                            <input id="enviar" class="submit_boton" type="submit" value="Cancelar"> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

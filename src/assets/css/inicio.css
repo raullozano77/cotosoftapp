@@ -1,0 +1,44 @@
+.secc_avisos {
+    margin: 10px;
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 4;
+    min-width: 440px;
+}
+
+.titulo_seccion {
+    display: flex;
+    font-size: 20px;
+    color: #2CA3E5;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+
+#table_contenido {
+    font-family: 'Roboto', sans-serif;
+    width: 95%;
+}
+
+@media screen and (max-width:768px) {
+    .box .contenido_box>.contenido_box .box .contenido_box .informacionpersonal,
+    .box .contenido_box>.contenido_box .box .contenido_box .foto_condomino {
+        /* Return them to document order */
+        -webkit-order: 0;
+        order: 0;
+    }
+    .secc_avisos {
+        margin: 10px;
+        -webkit-flex: 3 1 60%;
+        flex: 3 1 60%;
+        -webkit-order: 2;
+        order: 4;
+        min-width: 310px;
+    }
+    #table_contenido {
+        width: 90%;
+    }
+}

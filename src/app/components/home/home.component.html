@@ -1,0 +1,13 @@
+<div style="height: auto;">
+    <h1>{{titulo}}</h1>
+    <br/>
+    <input type="text" [(ngModel)]="producto_a_guardar">
+    <p>{{producto_a_guardar}}</p>
+    <br/>
+    <button (click)="guardarProducto()" typ="button" class="btn btn-warning btn-sm">Guardar Producto</button>
+    <br/>
+    <br/>
+    <ul class="list-group">
+        <li style="height: 30px; margin: 10px;" *ngFor="let producto of catalogo_productos, let i = index">{{i}} - {{producto}} <button (click)="eliminarProducto(i)" typ="button" class="btn btn-danger btn-sm">Borrar</button></li>
+    </ul>
+</div>

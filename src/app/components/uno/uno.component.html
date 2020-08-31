@@ -1,0 +1,16 @@
+<h1>{{ titulo }}</h1>
+<label for="nombreProducto">Nombre Producto:</label>
+<input type="text" name="nombreProducto" id="nombreProducto" [(ngModel)]="nombreProducto" />
+<br /><br />
+<div *ngIf="datosDelHijo">
+    <h1>{{datosDelHijo.nombre}}</h1>
+    <ul>
+        <li>{{datosDelHijo.marca}}</li>
+        <li>{{datosDelHijo.precio}}</li>
+        <li>{{datosDelHijo.categoria}}</li>
+    </ul>
+</div>
+<hr />
+<dosComponent [nombre]="nombreProducto" [marca]="'Whirpool'" (datosPasar)="verDatosDos($event)"></dosComponent>
+<h2>Termina UNO</h2>
+<hr />

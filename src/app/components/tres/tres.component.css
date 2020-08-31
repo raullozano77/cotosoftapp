@@ -1,0 +1,9 @@
+h1 {
+    color: orange;
+}
+
+.agotado {
+    color: black;
+    font-weight: bold;
+    background-color: grey;
+}

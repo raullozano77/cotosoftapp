@@ -1,0 +1,54 @@
+<main class="contenido ">
+
+
+
+
+
+    <div class="row " style="margin:5px; ">
+        <!--Grid column-->
+
+        <!-- Card -->
+        <div *ngFor="let team of teams " class="card testimonial-card" style="width: 18rem;  margin:10px;">
+
+            <!-- Background color -->
+            <div class="card-up indigo lighten-1 "><br></div>
+
+            <!-- Avatar -->
+            <div class="avatar mx-auto white ">
+                <img src="{{team.logo}}" style="width: 80px; margin:5px;" alt="team avatar ">
+            </div>
+
+            <!-- Content -->
+            <div class="card-body ">
+                <!-- Name -->
+                <h4 class="card-title ">{{team.shortName}}</h4>
+                <hr>
+                <!-- Quotation -->
+                <p><i class="fas fa-quote-left "></i> {{team.fullName}}</p>
+                <p><i class="fas fa-quote-left "></i> {{team.nickname}}</p>
+                <p><i class="fas fa-quote-left "></i> {{team.city}}</p>
+                <p><i class="fas fa-quote-left "></i> {{team.confName}}</p>
+                <p><i class="fas fa-quote-left "></i> {{team.leagues.standard.confName}}</p>
+            </div>
+
+        </div>
+        <!-- Card -->
+
+        <!--         <div *ngFor="let team of teams " class="card " style="width: 18rem; margin:10px; ">
+            <img src="{{team.logo}} " style="width: 50px; " class="card-img-top " alt="{{team.shortName}} ">
+            <div class="card-body ">
+                <h5 class="card-title ">{{team.fullName}}</h5>
+                <p class="card-text ">{{team.nickname}} </p>
+                <p class="card-text ">{{team.shortName}} </p>
+                <p class="card-text ">{{team.city}} </p>
+                <p class="card-text ">{{team.logo}}</p>
+                <p class="card-text ">{{team.confName}}</p>
+                <p class="card-text ">{{team.leagues.standard.confName}}</p>
+                <a href="# " class="btn btn-primary ">Go Somewhere</a>
+            </div>
+            <br><br>
+            <br><br>
+        </div> -->
+
+    </div>
+</main>

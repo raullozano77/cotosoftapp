@@ -1,0 +1,32 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Archivo</div>
+    <div id="path">Inicio>Documentos>Archivo</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="contenido_seccion">
+                <div class="titulo_secciones">
+                    <img class="img_secciones" src="assets/images/archivos.png" alt="areascomunes">
+                    <h1>Evento</h1>
+                </div>
+                <div>
+                    <form id="form_datos" action="" method="get" onsubmit="verdocumentos()" target="_blank">
+                        <div class="form-group">
+                            <label class="label_formularios" for="desarchivo">*Descripción del Archivo</label>
+                            <textarea id="desarchivo" name="desarchivo" rows="4" cols="50" class="input_formulario" placeholder="Ingresa la Descripción del Archivo" required></textarea>
+                            <label class="label_formularios" for="selarchivo">*Selecciona el Archivo</label>
+                            <input type="file" id="selarchivo" name="selarchivo" class="input_formulario" required>
+
+                        </div>
+                        <p class="campos_requeridos">* Campos requeridos</p>
+                        <div class="botones_secciones">
+                            <div class="boton"><a [routerLink]="['/documentos']">Aceptar</a></div>
+                            <div class="boton"><a [routerLink]="['/documentos']">Cancelar</a></div>
+                            <!-- <input id="enviar" class="submit_boton" type="submit" value="Aceptar">
+                            <input id="enviar" class="submit_boton" type="submit" value="Cancelar"> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

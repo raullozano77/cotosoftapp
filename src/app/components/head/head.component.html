@@ -1,0 +1,41 @@
+<script>
+    $(function() {
+        $(".toggle").on("click", function() {
+            if ($(".item").hasClass("active")) {
+                $(".item").removeClass("active");
+                $(this).find("a").html("<i class='fas fa-bars'></i>");
+            } else {
+                $(".item").addClass("active");
+                $(this).find("a").html("<i class='fas fa-times'></i>");
+            }
+        });
+    });
+</script>
+<header id="header" class="header fadeIn first fadeInDown">
+    <section class="banner ">
+        <div class="welcome ">
+            <h1>Residencial<br><span>San Gerardo</span></h1>
+        </div>
+        <img src="assets/images/logo.png " class="logo ">
+    </section>
+    <nav>
+        <ul class="menu">
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/inicio']" [routerLinkActive]="['active']">Inicio</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/finanzas']" [routerLinkActive]="['active']">Finanzas</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/areascomunes']" [routerLinkActive]="['active']">Áreas Comunes</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/eventos']" [routerLinkActive]="['active']">Eventos</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/avisos']" [routerLinkActive]="['active']">Avisos</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/cosasperdidas']" [routerLinkActive]="['active']">Cosas Perdidas</a></li>
+            <li *ngIf="!_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/login']" [routerLinkActive]="['active']">Iniciar sesión</a></li>
+            <li *ngIf="!_authS.usuario.uid" class="item "><a class="underlineHover" [routerLink]="['/nba']" [routerLinkActive]="['active']">NBA</a></li>
+            <li *ngIf="_authS.usuario.uid" class="item">
+                <img src="{{_authS.usuario.photoURL}}" alt=" " height="25px " class="rounded-circle " *ngIf="_authS.usuario.uid " />
+            </li>
+            <li *ngIf="_authS.usuario.uid " class="item "><a class="underlineHover " [routerLink]="[ '/login'] " [routerLinkActive]="[ 'active'] ">Cerrar sesión</a></li>
+            <!-- <li class="item "><a class="underlineHover " [routerLink]="[ '/documentos'] " [routerLinkActive]="[ 'active'] ">Documentos</a></li> -->
+            <!-- <li class="item button "><a href="# ">Cerrar sesión</a></li> -->
+            <li class="toggle "><i class="fas fa-bars "></i></li>
+        </ul>
+
+    </nav>
+</header>

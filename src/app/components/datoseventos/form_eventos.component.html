@@ -1,0 +1,41 @@
+<main class="contenido ">
+    <div id="seccion_titulo">Evento</div>
+    <div id="path">Inicio>Eventos>Evento</div>
+    <div class="box">
+        <div class="contenido_box">
+            <div class="contenido_seccion">
+                <div class="titulo_secciones">
+                    <img class="img_secciones" src="assets/images/eventos.png" alt="areascomunes">
+                    <h1>Evento</h1>
+                </div>
+                <div>
+                    <form id="form_datos" action="" method="get" onsubmit="vereventos()" target="_blank">
+                        <div class="form-group">
+                            <label class="label_formularios" for="tituloevento">*Titulo del Evento</label>
+                            <input id="tituloevento" class="input_formulario" type="text" placeholder="Ingresa el Titulo del Evento" required>
+
+                            <label class="label_formularios" for="asuntoevento">*Asunto del Evento</label>
+                            <textarea id="asuntoevento" name="asuntoevento" rows="4" cols="50" class="input_formulario" placeholder="Ingresa el Asunto del Evento" required></textarea>
+
+                            <label class="label_formularios" for="fechaevento">*Fecha del evento</label>
+                            <!-- comienza calendario -->
+                            <div class='input-group date input_fecha' id='datetimepicker1'>
+                                <input id="fechaevento" type='text' class="form-control" placeholder="Selecciona la Fecha del Evento" required/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            <!-- fin calendario -->
+                        </div>
+                        <p class="campos_requeridos">* Campos requeridos</p>
+                        <div class="botones_secciones">
+                            <div class="boton"><a [routerLink]="['/eventos']">Aceptar</a></div>
+                            <div class="boton"><a [routerLink]="['/eventos']">Cancelar</a></div>
+                            <!--                             <input id="enviar" class="submit_boton" type="submit" value="Aceptar">
+                            <input id="enviar" class="submit_boton" type="submit" value="Cancelar"> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
